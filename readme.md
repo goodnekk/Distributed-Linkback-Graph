@@ -45,6 +45,7 @@ This will return a JSON object of the following format:
 `Value` can be a String, Number, or Array. (Preferably not an Object)
 
 **POST**
+
 This will allow anyone to request a linkback on this Node. The post should be in this format:
 ```json
 {
@@ -62,6 +63,7 @@ The server will respond with the following:
 ```
 ### Linktype
 **GET**
+
 This will return a special Node that describes a link type. It does not have links or linkback
 ```json
 {
