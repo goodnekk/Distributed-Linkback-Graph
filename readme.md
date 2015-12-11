@@ -15,7 +15,7 @@ Distributed Linkback Graph (DLBG) works based on the following rules:
 
 ## Protocol
 
-The protocol design is minimal, underspecified and 
+The protocol is minimal and underspecified by design.
 
 ### Node
 Every Node is required to have the following requests:
