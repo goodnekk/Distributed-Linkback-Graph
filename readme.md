@@ -14,14 +14,19 @@ Distributed Linkback Graph (DLBG) works based on the following rules:
 - Nodes can (but are not required to) reciprocate a link through the linkback mechanism.
 
 ## Protocol
+
+The protocol design is minimal, underspecified and 
+
+### Node
 Every Node is required to have the following requests:
 
-### GET
+**GET**
+
 This will return a JSON object of the following format:
 ```json
 {
   "DLBG": "0.1",
-  "value": "{value}",
+  "value": {value},
   "link": [
     {
       "href":"{url}",
@@ -37,7 +42,9 @@ This will return a JSON object of the following format:
 }
 ```
 
-### POST
+`Value` can be a String, Number, or Array. (Preferably not an Object)
+
+**POST**
 This will allow anyone to request a linkback on this Node. The post should be in this format:
 ```json
 {
@@ -51,4 +58,14 @@ The server will respond with the following:
 {
   "DLBG": "0.1",
   "message": "{received/accepted/rejected}"
+}
+```
+### Linktype
+**GET**
+This will return a special Node that describes a link type. It does not have links or linkback
+```json
+{
+  "type": "{name}",
+  "inverse": "{inverse name}",
+  "description": "{short description}"
 }
