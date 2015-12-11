@@ -65,7 +65,8 @@ The server will respond with the following:
 This will return a special Node that describes a link type. It does not have links or linkback
 ```json
 {
-  "type": "{name}",
+  "DLBG": "0.1",
+  "name": "{name}",
   "inverse": "{inverse name}",
   "description": "{short description}"
 }
